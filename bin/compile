@@ -109,6 +109,9 @@ mkdir -p $BUILD_DIR/.bundle
 if [ -f $CACHE_DIR/.bundle/config ]; then
   rm $CACHE_DIR/.bundle/config
 fi
+echo "-----> Creating .bundle/config"
+ls -la $BUILD_DIR/$TARGET_VENDOR_DIR
+ls -la $BUILD_DIR/$TARGET_VENDOR_DIR/..
 echo "---
 BUNDLE_BUILD__RGEO: "--with-geos-config=$BUILD_DIR/$TARGET_VENDOR_DIR/bin --with-geos-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-geos-lib=$BUILD_DIR/$TARGET_VENDOR_DIR/lib --with-proj-dir=$BUILD_DIR/$TARGET_VENDOR_DIR --with-proj-lib=$BUILD_DIR/$TARGET_VENDOR_DIR/lib"
 BUNDLE_FROZEN: '1'
